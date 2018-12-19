@@ -408,6 +408,7 @@ exports.default = {
     started: 'Started',
     ended: 'Ended',
     duration: 'Duration: ',
+    username: 'Username: ',
     show_all: 'Show all',
     show_only_failed: 'Show only failed',
     show_only_success: 'Show only successful',
@@ -420,6 +421,7 @@ exports.default = {
     started: 'Begynte',
     ended: 'Avsluttet',
     duration: 'Varighet',
+    username: 'Brukernavn: ',
     show_all: 'Vis alle',
     show_only_failed: 'Vis kun feilet',
     show_only_success: 'Vis kun vellykket',
@@ -1747,6 +1749,16 @@ var EventStepper = function (_React$Component) {
               _translations2.default[locale].duration
             ),
             listItem.duration
+          ),
+          _react2.default.createElement(
+              'div',
+              null,
+              _react2.default.createElement(
+                  'span',
+                  { style: { fontWeight: 600, marginRight: 10 } },
+                  _translations2.default[locale].username
+              ),
+              listItem.username
           )
         )
       );
