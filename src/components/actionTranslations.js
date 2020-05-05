@@ -26,7 +26,8 @@ export default {
       VALIDATION_LEVEL_1: 'Validering nivå 1',
       DATASPACE_TRANSFER: 'Overføring sentral database',
       VALIDATION_LEVEL_2: 'Validering nivå 2',
-      BUILD_GRAPH: 'Bygg av reisesøkforslag',
+      BUILD_GRAPH: 'Bygg av reisesøkforslag (otp1)',
+      OTP2_BUILD_GRAPH: 'Bygg av reisesøkforslag (otp2)',
       UNKNOWN: 'Ukjent steg'
     },
     title: {
@@ -36,7 +37,8 @@ export default {
       VALIDATION_LEVEL_1: 'Validering av komplett dataområde nivå 1',
       VALIDATION_LEVEL_2: 'Validering av komplett dataområde nivå 2',
       DATASPACE_TRANSFER: 'Overføring til sentralt databaseområde nivå 2',
-      BUILD_GRAPH: 'Bygg av reisesøkforslag',
+      BUILD_GRAPH: 'Bygg av reisesøkforslag (otp1)',
+      OTP2_BUILD_GRAPH: 'Bygg av reisesøkforslag (otp2)',
       UNKNOWN: 'Dette steget er ukjent'
     },
     filename: {
@@ -75,7 +77,8 @@ export default {
       VALIDATION_LEVEL_1: 'Validation level 1',
       DATASPACE_TRANSFER: 'Transfer to central space',
       VALIDATION_LEVEL_2: 'Validation level 2',
-      BUILD_GRAPH: 'Build graph',
+      BUILD_GRAPH: 'Build graph (otp1)',
+      OTP2_BUILD_GRAPH: 'Build graph (otp2)',
       UNKNOWN: 'Uknown step'
     },
     title: {
@@ -85,7 +88,8 @@ export default {
       VALIDATION_LEVEL_1: 'Validation of complete data space - level 1',
       VALIDATION_LEVEL_2: 'Validation of complete data space - level 2',
       DATASPACE_TRANSFER: 'Transfer to central dataspace - level 2',
-      BUILD_GRAPH: 'Build graph',
+      BUILD_GRAPH: 'Build graph (otp1)',
+      OTP2_BUILD_GRAPH: 'Build graph (otp2)',
       UNKNOWN: 'This step is uknown'
     },
     filename: {

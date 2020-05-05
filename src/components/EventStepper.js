@@ -31,6 +31,7 @@ class EventStepper extends React.Component {
       'VALIDATION_LEVEL_2',
       'EXPORT',
       'BUILD_GRAPH',
+      'OTP2_BUILD_GRAPH',
       'EXPORT_NETEX'
     ];
   }
@@ -239,6 +240,13 @@ class EventStepper extends React.Component {
       ['EXPORT_NETEX', 'EXPORT'],
       'EXPORT'
     );
+
+    this.createCombinedSplit(
+      formattedGroups,
+      ['BUILD_GRAPH', 'OTP2_BUILD_GRAPH'],
+      'BUILD_GRAPH'
+    );
+
     const bullets = this.bullet(formattedGroups, groups, locale, includeLevel2);
 
     return (

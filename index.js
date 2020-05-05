@@ -290,7 +290,8 @@ exports.default = {
       VALIDATION_LEVEL_1: 'Validering nivå 1',
       DATASPACE_TRANSFER: 'Overføring sentral database',
       VALIDATION_LEVEL_2: 'Validering nivå 2',
-      BUILD_GRAPH: 'Bygg av reisesøkforslag',
+      BUILD_GRAPH: 'Bygg av reisesøkforslag (otp1)',
+      OTP2_BUILD_GRAPH: 'Bygg av reisesøkforslag (otp2)',
       UNKNOWN: 'Ukjent steg'
     },
     title: {
@@ -300,7 +301,8 @@ exports.default = {
       VALIDATION_LEVEL_1: 'Validering av komplett dataområde nivå 1',
       VALIDATION_LEVEL_2: 'Validering av komplett dataområde nivå 2',
       DATASPACE_TRANSFER: 'Overføring til sentralt databaseområde nivå 2',
-      BUILD_GRAPH: 'Bygg av reisesøkforslag',
+      BUILD_GRAPH: 'Bygg av reisesøkforslag (otp1)',
+      OTP2_BUILD_GRAPH: 'Bygg av reisesøkforslag (otp2)',
       UNKNOWN: 'Dette steget er ukjent'
     },
     filename: {
@@ -339,7 +341,8 @@ exports.default = {
       VALIDATION_LEVEL_1: 'Validation level 1',
       DATASPACE_TRANSFER: 'Transfer to central space',
       VALIDATION_LEVEL_2: 'Validation level 2',
-      BUILD_GRAPH: 'Build graph',
+      BUILD_GRAPH: 'Build graph (otp1)',
+      OTP2_BUILD_GRAPH: 'Build graph (otp2)',
       UNKNOWN: 'Uknown step'
     },
     title: {
@@ -349,7 +352,8 @@ exports.default = {
       VALIDATION_LEVEL_1: 'Validation of complete data space - level 1',
       VALIDATION_LEVEL_2: 'Validation of complete data space - level 2',
       DATASPACE_TRANSFER: 'Transfer to central dataspace - level 2',
-      BUILD_GRAPH: 'Build graph',
+      BUILD_GRAPH: 'Build graph (otp1)',
+      OTP2_BUILD_GRAPH: 'Build graph (otp2)',
       UNKNOWN: 'This step is uknown'
     },
     filename: {
@@ -1496,7 +1500,7 @@ var EventStepper = function (_React$Component) {
   _createClass(EventStepper, [{
     key: 'eventStates',
     value: function eventStates() {
-      return ['FILE_TRANSFER', 'FILE_CLASSIFICATION', 'FILE_DELIVERY', 'IMPORT', 'VALIDATION_LEVEL_1', 'DATASPACE_TRANSFER', 'VALIDATION_LEVEL_2', 'EXPORT', 'BUILD_GRAPH', 'EXPORT_NETEX'];
+      return ['FILE_TRANSFER', 'FILE_CLASSIFICATION', 'FILE_DELIVERY', 'IMPORT', 'VALIDATION_LEVEL_1', 'DATASPACE_TRANSFER', 'VALIDATION_LEVEL_2', 'EXPORT', 'BUILD_GRAPH', 'OTP2_BUILD_GRAPH', 'EXPORT_NETEX'];
     }
   }, {
     key: 'addUnlistedStates',
@@ -1697,6 +1701,9 @@ var EventStepper = function (_React$Component) {
       var formattedGroups = this.addUnlistedStates(groups);
       formattedGroups = this.aggreggateFileEvents(formattedGroups);
       this.createCombinedSplit(formattedGroups, ['EXPORT_NETEX', 'EXPORT'], 'EXPORT');
+
+      this.createCombinedSplit(formattedGroups, ['BUILD_GRAPH', 'OTP2_BUILD_GRAPH'], 'BUILD_GRAPH');
+
       var bullets = this.bullet(formattedGroups, groups, locale, includeLevel2);
 
       return _react2.default.createElement(
