@@ -5,7 +5,7 @@ A wealthy JavaScript repository with styles, React components and helper functio
 These parts are part of the library
 - src/components
 -  ~~src/containers~~ (not working yet)
-- src/styles 
+- src/styles
 - src/utils
 
 
@@ -16,7 +16,7 @@ or
 * `import { color } from 'bogu/styles'`
 
 # Release
-Remember to build before releases. 
+Remember to build before releases.
 
 Checklist includes:
 * `npm run build`
@@ -29,7 +29,7 @@ Checklist includes:
 `<version>` number is used with npm.
 
 # NPM install
-Bogu is installed with npm from github using the following command: 
+Bogu is installed with npm from github using the following command:
 `npm install --save git+ssh://git@github.com:entur/bogu.git#0.1.3`
 
 Alternatively it can be added to `package.json` like so
@@ -37,3 +37,9 @@ Alternatively it can be added to `package.json` like so
 `"bogu": "git@github.com:entur/bogu.git#0.1.3"`
 
 It is important to refer to a specific version, in this case version `#0.1.3`
+
+# Changelog
+
+## 1.0.0
+
+Upgrades react peer dependency to >16, and therefore is a breaking change.
