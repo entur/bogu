@@ -58,6 +58,14 @@ export default {
       FILE_TRANSFER: 'Filoverføring feilet',
       FILE_CLASSIFICATION: 'Filklassifisering feilet'
     },
+    errorCode: {
+      ERROR_FILE_UNKNOWN_FILE_EXTENSION: 'Filendelsen er hverken .zip eller .ZIP',
+      ERROR_FILE_NOT_A_ZIP_FILE: 'Filen er ikke et zip arkiv',
+      ERROR_FILE_UNKNOWN_FILE_TYPE: 'Filen er hverken NeTEx eller GTFS',
+      ERROR_FILE_INVALID_ZIP_ENTRY_ENCODING: 'Arkivet inneholder filnavn som ikke er gyldig UTF8',
+      ERROR_FILE_INVALID_XML_ENCODING_ERROR: 'Arkivet inneholder XML-filer med ugyldig tegnsett',
+      ERROR_NETEX_EXPORT_EMPTY_EXPORT: 'Det eksporterte datasettet er tomt (fant ingen aktive tidtabelldata)'
+    },
     filterButton: {
       ALL_TIME: 'Ubegrenset',
       LAST_12_HOURS: 'Siste 12 timene',
@@ -108,6 +116,14 @@ export default {
     errorMessage: {
       FILE_TRANSFER: 'Failed to transfer file',
       FILE_CLASSIFICATION: 'Failed on file classification'
+    },
+    errorCode: {
+      ERROR_FILE_UNKNOWN_FILE_EXTENSION: 'The file extension is neither .zip nor .ZIP',
+      ERROR_FILE_NOT_A_ZIP_FILE: 'The file is not a zip archive',
+      ERROR_FILE_UNKNOWN_FILE_TYPE: 'The file is neither a NeTEx archive nor a GTFS archive',
+      ERROR_FILE_INVALID_ZIP_ENTRY_ENCODING: 'The archive contains file names that are not UTF8-encoded',
+      ERROR_FILE_INVALID_XML_ENCODING_ERROR: 'The archive contains XML files with an invalid encoding',
+      ERROR_NETEX_EXPORT_EMPTY_EXPORT: 'The exported dataset is empty (no active timetable data found)'
     },
     filterButton: {
       ALL_TIME: 'Unlimited',

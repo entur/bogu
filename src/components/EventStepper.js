@@ -298,6 +298,13 @@ class EventStepper extends React.Component {
             }}
             onClick={event => event.stopPropagation()}
           >
+            {listItem.errorCode && (
+              <div>
+                <span style={{ fontWeight: 600, marginRight: 10, color: 'red' }}>
+                  {ActionTranslations[locale].errorCode[listItem.errorCode]}
+                </span>
+              </div>
+            )}
             <div>
               <span style={{ fontWeight: 600, marginRight: 10 }}>
                 {translations[locale].started}
