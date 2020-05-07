@@ -62,9 +62,11 @@ export default {
       ERROR_FILE_UNKNOWN_FILE_EXTENSION: 'Filendelsen er hverken .zip eller .ZIP',
       ERROR_FILE_NOT_A_ZIP_FILE: 'Filen er ikke et zip arkiv',
       ERROR_FILE_UNKNOWN_FILE_TYPE: 'Filen er hverken NeTEx eller GTFS',
+      ERROR_FILE_ZIP_CONTAINS_SUB_DIRECTORIES: 'Arkivet inneholder underkataloger',
       ERROR_FILE_INVALID_ZIP_ENTRY_ENCODING: 'Arkivet inneholder filnavn som ikke er gyldig UTF8',
       ERROR_FILE_INVALID_XML_ENCODING_ERROR: 'Arkivet inneholder XML-filer med ugyldig tegnsett',
-      ERROR_NETEX_EXPORT_EMPTY_EXPORT: 'Det eksporterte datasettet er tomt (fant ingen aktive tidtabelldata)'
+      ERROR_NETEX_EXPORT_EMPTY_EXPORT: 'Det eksporterte datasettet er tomt (fant ingen aktive tidtabelldata)',
+      ERROR_VALIDATION_NO_DATA: 'Det finnes ingen data å validere. Statusen for siste import bør kontrolleres'
     },
     filterButton: {
       ALL_TIME: 'Ubegrenset',
@@ -121,9 +123,12 @@ export default {
       ERROR_FILE_UNKNOWN_FILE_EXTENSION: 'The file extension is neither .zip nor .ZIP',
       ERROR_FILE_NOT_A_ZIP_FILE: 'The file is not a zip archive',
       ERROR_FILE_UNKNOWN_FILE_TYPE: 'The file is neither a NeTEx archive nor a GTFS archive',
+      ERROR_FILE_ZIP_CONTAINS_SUB_DIRECTORIES: 'The archive contains sub-directories',
       ERROR_FILE_INVALID_ZIP_ENTRY_ENCODING: 'The archive contains file names that are not UTF8-encoded',
       ERROR_FILE_INVALID_XML_ENCODING_ERROR: 'The archive contains XML files with an invalid encoding',
-      ERROR_NETEX_EXPORT_EMPTY_EXPORT: 'The exported dataset is empty (no active timetable data found)'
+      ERROR_NETEX_EXPORT_EMPTY_EXPORT: 'The exported dataset is empty (no active timetable data found)',
+      ERROR_VALIDATION_NO_DATA: 'There is no data to validate. Check the status of the latest data import'
+
     },
     filterButton: {
       ALL_TIME: 'Unlimited',
