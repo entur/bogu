@@ -65,6 +65,7 @@ export default {
       ERROR_FILE_ZIP_CONTAINS_SUB_DIRECTORIES: 'Arkivet inneholder underkataloger',
       ERROR_FILE_INVALID_ZIP_ENTRY_ENCODING: 'Arkivet inneholder filnavn som ikke er gyldig UTF8',
       ERROR_FILE_INVALID_XML_ENCODING_ERROR: 'Arkivet inneholder XML-filer med ugyldig tegnsett',
+      ERROR_FILE_INVALID_XML_CONTENT: 'Arkivet inneholder ugyldige XML-filer',
       ERROR_NETEX_EXPORT_EMPTY_EXPORT: 'Det eksporterte datasettet er tomt (fant ingen aktive tidtabelldata)',
       ERROR_VALIDATION_NO_DATA: 'Det finnes ingen data å validere. Statusen for siste import bør kontrolleres'
     },
@@ -126,6 +127,7 @@ export default {
       ERROR_FILE_ZIP_CONTAINS_SUB_DIRECTORIES: 'The archive contains sub-directories',
       ERROR_FILE_INVALID_ZIP_ENTRY_ENCODING: 'The archive contains file names that are not UTF8-encoded',
       ERROR_FILE_INVALID_XML_ENCODING_ERROR: 'The archive contains XML files with an invalid encoding',
+      ERROR_FILE_INVALID_XML_CONTENT: 'The archive contains invalid XML files',
       ERROR_NETEX_EXPORT_EMPTY_EXPORT: 'The exported dataset is empty (no active timetable data found)',
       ERROR_VALIDATION_NO_DATA: 'There is no data to validate. Check the status of the latest data import'
 
