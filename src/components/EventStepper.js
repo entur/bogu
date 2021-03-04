@@ -30,6 +30,7 @@ class EventStepper extends React.Component {
       'DATASPACE_TRANSFER',
       'VALIDATION_LEVEL_2',
       'EXPORT',
+      'EXPORT_NETEX_BLOCKS',
       'BUILD_GRAPH',
       'OTP2_BUILD_GRAPH',
       'EXPORT_NETEX'
@@ -108,20 +109,28 @@ class EventStepper extends React.Component {
     return groups;
   }
 
-  bullet(formattedGroups, groups, locale, includeLevel2) {
-    const columnStyle = {
+  bullet(formattedGroups, groups, locale, includeLevel2, hideIgnoredExportNetexBlocks) {
+    const columnStyle = (column) => ({
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-between',
-      height: 45
-    };
+      height: Array.isArray(column) && column.length > 2 ? 90 : 45
+    });
 
     return Object.keys(formattedGroups).map((group, index) => {
       let column;
       let event = formattedGroups[group];
 
       if (Array.isArray(event)) {
-        column = Object.keys(event).map((key, i) => {
+        column = Object.keys(event)
+          .filter((key) => {
+            if (hideIgnoredExportNetexBlocks && key === 'EXPORT_NETEX_BLOCKS') {
+              return event[key].endState !== 'IGNORED';
+            }
+
+            return true;
+          })
+          .map((key, i) => {
           return this.renderEvent(
             event[key],
             event,
@@ -146,7 +155,7 @@ class EventStepper extends React.Component {
         );
       }
       return (
-        <div key={'bullet-' + index} style={columnStyle}>
+        <div key={'bullet-' + index} style={columnStyle(column)}>
           {column}
         </div>
       );
@@ -225,12 +234,12 @@ class EventStepper extends React.Component {
       display: 'flex',
       flexDirection: 'row',
       alignContent: 'center',
-      alignItems: 'center',
+      alignItems: 'start',
       justifyContent: 'center',
       marginTop: 10
     };
 
-    const { groups, listItem, locale, includeLevel2 } = this.props;
+    const { groups, listItem, locale, includeLevel2, hideIgnoredExportNetexBlocks } = this.props;
     const { expanded } = this.state;
 
     let formattedGroups = this.addUnlistedStates(groups);
@@ -243,11 +252,11 @@ class EventStepper extends React.Component {
 
     this.createCombinedSplit(
       formattedGroups,
-      ['BUILD_GRAPH', 'OTP2_BUILD_GRAPH'],
+      ['BUILD_GRAPH', 'OTP2_BUILD_GRAPH', 'EXPORT_NETEX_BLOCKS'],
       'BUILD_GRAPH'
     );
 
-    const bullets = this.bullet(formattedGroups, groups, locale, includeLevel2);
+    const bullets = this.bullet(formattedGroups, groups, locale, includeLevel2, hideIgnoredExportNetexBlocks);
 
     return (
       <div
@@ -281,7 +290,7 @@ class EventStepper extends React.Component {
         <div style={stepperstyle}>
           {bullets}
           <div
-            style={{ marginLeft: 'auto', marginRight: 20, marginTop: -50 }}
+            style={{ marginLeft: 'auto', marginRight: 20, marginTop: -25 }}
             onClick={() => this.handleToggleVisibility()}
           >
             {!expanded ? <FaChevronDown /> : <FaChevronUp />}

@@ -28,6 +28,7 @@ export default {
       VALIDATION_LEVEL_2: 'Validering nivå 2',
       BUILD_GRAPH: 'Bygg av reisesøkforslag (otp1)',
       OTP2_BUILD_GRAPH: 'Bygg av reisesøkforslag (otp2)',
+      EXPORT_NETEX_BLOCKS: 'Eksport av NeTEx blocks',
       UNKNOWN: 'Ukjent steg'
     },
     title: {
@@ -39,6 +40,7 @@ export default {
       DATASPACE_TRANSFER: 'Overføring til sentralt databaseområde nivå 2',
       BUILD_GRAPH: 'Bygg av reisesøkforslag (otp1)',
       OTP2_BUILD_GRAPH: 'Bygg av reisesøkforslag (otp2)',
+      EXPORT_NETEX_BLOCKS: 'Eksport av NeTEx blocks',
       UNKNOWN: 'Dette steget er ukjent'
     },
     filename: {
@@ -91,6 +93,7 @@ export default {
       VALIDATION_LEVEL_2: 'Validation level 2',
       BUILD_GRAPH: 'Build graph (otp1)',
       OTP2_BUILD_GRAPH: 'Build graph (otp2)',
+      EXPORT_NETEX_BLOCKS: 'Export NeTEx blocks',
       UNKNOWN: 'Uknown step'
     },
     title: {
@@ -102,6 +105,7 @@ export default {
       DATASPACE_TRANSFER: 'Transfer to central dataspace - level 2',
       BUILD_GRAPH: 'Build graph (otp1)',
       OTP2_BUILD_GRAPH: 'Build graph (otp2)',
+      EXPORT_NETEX_BLOCKS: 'Export NeTEx blocks',
       UNKNOWN: 'This step is uknown'
     },
     filename: {
