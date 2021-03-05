@@ -77,8 +77,10 @@ class EventDetails extends React.Component {
       locale,
       includeLevel2,
       showDateFilter,
-      showNewDeliveriesFilter
+      showNewDeliveriesFilter,
+      hideIgnoredExportNetexBlocks = true
     } = this.props;
+
     const {
       activePageIndex,
       endStateFilter,
@@ -211,6 +213,7 @@ class EventDetails extends React.Component {
                     key={'event-group-' + listItem.chouetteJobId + '-' + index}
                     groups={eventGroup}
                     listItem={listItem}
+                    hideIgnoredExportNetexBlocks={hideIgnoredExportNetexBlocks}
                   />
                 </div>
               );

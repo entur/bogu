@@ -16,6 +16,7 @@ const EventsExample = props => {
         locale="nb"
         showDateFilter={true}
         showNewDeliveriesFilter={true}
+        hideIgnoredExportNetexBlocks={false}
       />
     </div>
   )
