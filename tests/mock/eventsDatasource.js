@@ -97,6 +97,59 @@ export default [
   {
     events: [
       {
+        state: 'OK',
+        date: 1498657848334,
+        action: 'FILE_TRANSFER',
+        chouetteJobId: null,
+        referential: null
+      },
+      {
+        state: 'STARTED',
+        date: 1498657848134,
+        action: 'FILE_CLASSIFICATION',
+        chouetteJobId: null,
+        referential: null
+      },
+      {
+        state: 'OK',
+        date: 1498657848234,
+        action: 'FILE_CLASSIFICATION',
+        chouetteJobId: null,
+        referential: null
+      },
+      {
+        state: 'STARTED',
+        date: 1498657948334,
+        action: 'PREVALIDATION',
+        chouetteJobId: 123,
+        referential: 'avi'
+      },
+      {
+        state: 'PENDING',
+        date: 1498657948334,
+        action: 'PREVALIDATION',
+        chouetteJobId: null,
+        referential: 'avi'
+      },
+      {
+        state: 'FAILED',
+        date: 1498657949334,
+        action: 'PREVALIDATION',
+        chouetteJobId: 123,
+        referential: 'avi'
+      },
+    ],
+    correlationId: 'f4171fe9-d3f6-4c9c-b060-aed62211f3be',
+    firstEvent: 1498737100552,
+    lastEvent: 1498657848134,
+    durationMillis: 60785,
+    endState: 'FAILED',
+    fileName: 'fooobar.zip',
+    providerId: 2
+  },
+  {
+    events: [
+      {
         state: 'PENDING',
         date: 1498737100552,
         action: 'VALIDATION_LEVEL_1',

@@ -25,7 +25,8 @@ const EventsExample = props => {
 const addChouetteUrl = () => {
   // polyfill chouetteBaseUrl for correct behavior in app
   window.config = {
-    chouetteBaseUrl: 'https://rutedb-test.rutebanken.org/'
+    chouetteBaseUrl: 'https://rutedb-test.rutebanken.org/',
+    udugBaseUrl: 'https://udug-dev.web.app/'
   }
 }
 
