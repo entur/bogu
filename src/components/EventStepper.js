@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ActionTranslations from './actionTranslations';
 import FaChevronDown from 'react-icons/lib/fa/chevron-down';
 import FaChevronUp from 'react-icons/lib/fa/chevron-up';
-import ControlledChouetteLink from './ControlledChouetteLink';
+import ControlledLink from './ControlledLink';
 import translations from './translations';
 import EventStatusIcon from './EventStatusIcon';
 
@@ -25,12 +25,14 @@ class EventStepper extends React.Component {
       'FILE_TRANSFER',
       'FILE_CLASSIFICATION',
       'FILE_DELIVERY',
+      'PREVALIDATION',
       'IMPORT',
       'VALIDATION_LEVEL_1',
       'DATASPACE_TRANSFER',
       'VALIDATION_LEVEL_2',
       'EXPORT',
       'EXPORT_NETEX_BLOCKS',
+      'EXPORT_NETEX_POSTVALIDATION',
       'BUILD_GRAPH',
       'OTP2_BUILD_GRAPH',
       'EXPORT_NETEX'
@@ -221,9 +223,9 @@ class EventStepper extends React.Component {
             opacity: event.missingBeforeStartStart ? 0.2 : 1
           }}
         >
-          <ControlledChouetteLink includeLevel2={includeLevel2} events={event}>
+          <ControlledLink includeLevel2={includeLevel2} events={event}>
             {ActionTranslations[locale].text[group]}
-          </ControlledChouetteLink>
+          </ControlledLink>
         </div>
       </div>
     );
