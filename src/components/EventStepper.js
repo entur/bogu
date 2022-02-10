@@ -7,6 +7,11 @@ import ControlledLink from './ControlledLink';
 import translations from './translations';
 import EventStatusIcon from './EventStatusIcon';
 
+const NETEX_BLOCKS_EVENTS = [
+  'EXPORT_NETEX_BLOCKS',
+  'EXPORT_NETEX_BLOCKS_POSTVALIDATION'
+];
+
 class EventStepper extends React.Component {
   constructor(props) {
     super(props);
@@ -30,13 +35,13 @@ class EventStepper extends React.Component {
       'VALIDATION_LEVEL_1',
       'DATASPACE_TRANSFER',
       'VALIDATION_LEVEL_2',
-      'EXPORT',
+      'EXPORT_NETEX',
       'EXPORT_NETEX_POSTVALIDATION',
       'EXPORT_NETEX_BLOCKS',
+      'EXPORT',
       'BUILD_GRAPH',
       'OTP2_BUILD_GRAPH',
-      'EXPORT_NETEX',
-      'EXPORT_NETEX_BLOCKS_POSTVALIDATION'
+      'EXPORT_NETEX_BLOCKS_POSTVALIDATION',
     ];
   }
 
@@ -127,7 +132,7 @@ class EventStepper extends React.Component {
       if (Array.isArray(event)) {
         column = Object.keys(event)
           .filter((key) => {
-            if (hideIgnoredExportNetexBlocks && key === 'EXPORT_NETEX_BLOCKS') {
+            if (hideIgnoredExportNetexBlocks && NETEX_BLOCKS_EVENTS.includes(key)) {
               return event[key].endState !== 'IGNORED';
             }
 
@@ -146,6 +151,9 @@ class EventStepper extends React.Component {
           );
         });
       } else {
+        if (hideIgnoredExportNetexBlocks && NETEX_BLOCKS_EVENTS.includes(group) && event.endState === 'IGNORED') {
+          return null;
+        }
         column = this.renderEvent(
           event,
           groups,
@@ -247,15 +255,10 @@ class EventStepper extends React.Component {
 
     let formattedGroups = this.addUnlistedStates(groups);
     formattedGroups = this.aggreggateFileEvents(formattedGroups);
-    this.createCombinedSplit(
-      formattedGroups,
-      ['EXPORT_NETEX', 'EXPORT'],
-      'EXPORT'
-    );
 
     this.createCombinedSplit(
       formattedGroups,
-      ['EXPORT_NETEX_BLOCKS', 'BUILD_GRAPH', 'OTP2_BUILD_GRAPH'],
+      ['EXPORT_NETEX_BLOCKS', 'EXPORT', 'BUILD_GRAPH', 'OTP2_BUILD_GRAPH'],
       'BUILD_GRAPH'
     );
 
