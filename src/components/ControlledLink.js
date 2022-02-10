@@ -4,7 +4,8 @@ import UdugLink from './UdugLink';
 
 const supportedUdugActions = [
   'PREVALIDATION',
-  'EXPORT_NETEX_POSTVALIDATION'
+  'EXPORT_NETEX_POSTVALIDATION',
+  'EXPORT_NETEX_BLOCKS_POSTVALIDATION'
 ];
 
 const ControlledLink = ({ events, includeLevel2, children }) => {

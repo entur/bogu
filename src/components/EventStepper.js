@@ -31,11 +31,12 @@ class EventStepper extends React.Component {
       'DATASPACE_TRANSFER',
       'VALIDATION_LEVEL_2',
       'EXPORT',
-      'EXPORT_NETEX_BLOCKS',
       'EXPORT_NETEX_POSTVALIDATION',
+      'EXPORT_NETEX_BLOCKS',
       'BUILD_GRAPH',
       'OTP2_BUILD_GRAPH',
-      'EXPORT_NETEX'
+      'EXPORT_NETEX',
+      'EXPORT_NETEX_BLOCKS_POSTVALIDATION'
     ];
   }
 
@@ -254,7 +255,7 @@ class EventStepper extends React.Component {
 
     this.createCombinedSplit(
       formattedGroups,
-      ['BUILD_GRAPH', 'OTP2_BUILD_GRAPH', 'EXPORT_NETEX_BLOCKS'],
+      ['EXPORT_NETEX_BLOCKS', 'BUILD_GRAPH', 'OTP2_BUILD_GRAPH'],
       'BUILD_GRAPH'
     );
 

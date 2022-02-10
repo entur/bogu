@@ -295,6 +295,7 @@ exports.default = {
       BUILD_GRAPH: 'Bygg av reisesøkforslag (otp1)',
       OTP2_BUILD_GRAPH: 'Bygg av reisesøkforslag (otp2)',
       EXPORT_NETEX_BLOCKS: 'Eksport av NeTEx blocks',
+      EXPORT_NETEX_BLOCKS_POSTVALIDATION: 'NeTEx blocks postvalidering',
       UNKNOWN: 'Ukjent steg'
     },
     title: {
@@ -362,6 +363,7 @@ exports.default = {
       BUILD_GRAPH: 'Build graph (otp1)',
       OTP2_BUILD_GRAPH: 'Build graph (otp2)',
       EXPORT_NETEX_BLOCKS: 'Export NeTEx blocks',
+      EXPORT_NETEX_BLOCKS_POSTVALIDATION: 'NeTEx blocks post-validation',
       UNKNOWN: 'Uknown step'
     },
     title: {
