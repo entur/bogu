@@ -17,6 +17,7 @@ const EventsExample = props => {
         showDateFilter={true}
         showNewDeliveriesFilter={true}
         hideIgnoredExportNetexBlocks={false}
+        hideAntuValidationSteps={false}
       />
     </div>
   )

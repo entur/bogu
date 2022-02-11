@@ -12,6 +12,12 @@ const NETEX_BLOCKS_EVENTS = [
   'EXPORT_NETEX_BLOCKS_POSTVALIDATION'
 ];
 
+const ANTU_VALIDATION_EVENTS = [
+  'PREVALIDATION',
+  'EXPORT_NETEX_POSTVALIDATION',
+  'EXPORT_NETEX_BLOCKS_POSTVALIDATION'
+];
+
 class EventStepper extends React.Component {
   constructor(props) {
     super(props);
@@ -117,7 +123,7 @@ class EventStepper extends React.Component {
     return groups;
   }
 
-  bullet(formattedGroups, groups, locale, includeLevel2, hideIgnoredExportNetexBlocks) {
+  bullet(formattedGroups, groups, locale, includeLevel2, hideIgnoredExportNetexBlocks, hideAntuValidationSteps) {
     const columnStyle = (column) => ({
       display: 'flex',
       flexDirection: 'column',
@@ -134,6 +140,10 @@ class EventStepper extends React.Component {
           .filter((key) => {
             if (hideIgnoredExportNetexBlocks && NETEX_BLOCKS_EVENTS.includes(key)) {
               return event[key].endState !== 'IGNORED';
+            }
+
+            if (hideAntuValidationSteps && ANTU_VALIDATION_EVENTS.includes(key)) {
+              return false;
             }
 
             return true;
@@ -154,6 +164,11 @@ class EventStepper extends React.Component {
         if (hideIgnoredExportNetexBlocks && NETEX_BLOCKS_EVENTS.includes(group) && event.endState === 'IGNORED') {
           return null;
         }
+
+        if (hideAntuValidationSteps && ANTU_VALIDATION_EVENTS.includes(group)) {
+          return null;
+        }
+
         column = this.renderEvent(
           event,
           groups,
@@ -250,7 +265,7 @@ class EventStepper extends React.Component {
       marginTop: 10
     };
 
-    const { groups, listItem, locale, includeLevel2, hideIgnoredExportNetexBlocks } = this.props;
+    const { groups, listItem, locale, includeLevel2, hideIgnoredExportNetexBlocks, hideAntuValidationSteps } = this.props;
     const { expanded } = this.state;
 
     let formattedGroups = this.addUnlistedStates(groups);
@@ -262,7 +277,7 @@ class EventStepper extends React.Component {
       'BUILD_GRAPH'
     );
 
-    const bullets = this.bullet(formattedGroups, groups, locale, includeLevel2, hideIgnoredExportNetexBlocks);
+    const bullets = this.bullet(formattedGroups, groups, locale, includeLevel2, hideIgnoredExportNetexBlocks, hideAntuValidationSteps);
 
     return (
       <div
