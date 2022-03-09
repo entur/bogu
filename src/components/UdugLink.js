@@ -7,7 +7,7 @@ const UdugLink = ({ id, referential, children }) => {
   const URL = `${baseURL}${referential}/${id}`;
 
   return (
-    <a title={URL} target="_blank" href={URL}>
+    <a title={URL} href={URL}>
       {children}
     </a>
   );
