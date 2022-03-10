@@ -79,7 +79,8 @@ class EventDetails extends React.Component {
       showDateFilter,
       showNewDeliveriesFilter,
       hideIgnoredExportNetexBlocks = true,
-      hideAntuValidationSteps = true
+      hideAntuValidationSteps = true,
+      navigate
     } = this.props;
 
     const {
@@ -216,6 +217,7 @@ class EventDetails extends React.Component {
                     listItem={listItem}
                     hideIgnoredExportNetexBlocks={hideIgnoredExportNetexBlocks}
                     hideAntuValidationSteps={hideAntuValidationSteps}
+                    navigate={navigate}
                   />
                 </div>
               );

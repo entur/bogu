@@ -8,7 +8,7 @@ const supportedUdugActions = [
   'EXPORT_NETEX_BLOCKS_POSTVALIDATION'
 ];
 
-const ControlledLink = ({ events, includeLevel2, children }) => {
+const ControlledLink = ({ events, includeLevel2, navigate, children }) => {
   let supportedChouetteActions = ['IMPORT', 'VALIDATION_LEVEL_1'];
 
   let chouetteMap = {
@@ -48,6 +48,7 @@ const ControlledLink = ({ events, includeLevel2, children }) => {
         <UdugLink
           id={endState.chouetteJobId}
           referential={endState.referential}
+          navigate={navigate}
         >
           {children}
         </UdugLink>

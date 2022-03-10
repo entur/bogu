@@ -247,7 +247,7 @@ class EventStepper extends React.Component {
             opacity: event.missingBeforeStartStart ? 0.2 : 1
           }}
         >
-          <ControlledLink includeLevel2={includeLevel2} events={event}>
+          <ControlledLink includeLevel2={includeLevel2} events={event} navigate={this.props.navigate}>
             {ActionTranslations[locale].text[group]}
           </ControlledLink>
         </div>
