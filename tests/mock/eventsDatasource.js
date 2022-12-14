@@ -1,5 +1,179 @@
 export default [
   {
+    "events": [
+        {
+            "state": "PENDING",
+            "date": 1670972104337,
+            "action": "VALIDATION_LEVEL_1",
+            "chouetteJobId": null,
+            "referential": "rut"
+        },
+        {
+            "state": "PENDING",
+            "date": 1670972623597,
+            "action": "DATASPACE_TRANSFER",
+            "chouetteJobId": null,
+            "referential": "rut"
+        },
+        {
+            "state": "OK",
+            "date": 1670972623597,
+            "action": "VALIDATION_LEVEL_1",
+            "chouetteJobId": "5409702",
+            "referential": "rut"
+        },
+        {
+            "state": "OK",
+            "date": 1670974972781,
+            "action": "DATASPACE_TRANSFER",
+            "chouetteJobId": "5409752",
+            "referential": "rut"
+        },
+        {
+            "state": "PENDING",
+            "date": 1670974974031,
+            "action": "VALIDATION_LEVEL_2",
+            "chouetteJobId": null,
+            "referential": "rut"
+        },
+        {
+            "state": "STARTED",
+            "date": 1670974974710,
+            "action": "VALIDATION_LEVEL_2",
+            "chouetteJobId": "5409787",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "OK",
+            "date": 1670975491463,
+            "action": "VALIDATION_LEVEL_2",
+            "chouetteJobId": "5409787",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "PENDING",
+            "date": 1670975492535,
+            "action": "EXPORT_NETEX",
+            "chouetteJobId": null,
+            "referential": "rb_rut"
+        },
+        {
+            "state": "STARTED",
+            "date": 1670975493185,
+            "action": "EXPORT_NETEX",
+            "chouetteJobId": "5409810",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "PENDING",
+            "date": 1670975920480,
+            "action": "EXPORT_NETEX_POSTVALIDATION",
+            "chouetteJobId": null,
+            "referential": "rb_rut"
+        },
+        {
+            "state": "OK",
+            "date": 1670975920546,
+            "action": "EXPORT_NETEX",
+            "chouetteJobId": "5409810",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "STARTED",
+            "date": 1670975922779,
+            "action": "EXPORT_NETEX_POSTVALIDATION",
+            "chouetteJobId": "rb_rut_20221214005841416912",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "OK",
+            "date": 1670976362299,
+            "action": "EXPORT_NETEX_POSTVALIDATION",
+            "chouetteJobId": "rb_rut_20221214005841416912",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "PENDING",
+            "date": 1670976395703,
+            "action": "EXPORT_NETEX_MERGED_POSTVALIDATION",
+            "chouetteJobId": null,
+            "referential": "rb_rut"
+        },
+        {
+            "state": "STARTED",
+            "date": 1670976397921,
+            "action": "EXPORT_NETEX_MERGED_POSTVALIDATION",
+            "chouetteJobId": "rb_rut_20221214010636743949",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "OK",
+            "date": 1670976471349,
+            "action": "EXPORT_NETEX_MERGED_POSTVALIDATION",
+            "chouetteJobId": "rb_rut_20221214010636743949",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "PENDING",
+            "date": 1670976472719,
+            "action": "BUILD_GRAPH",
+            "chouetteJobId": "rb_rut_20221214010636743949",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "STARTED",
+            "date": 1670976473501,
+            "action": "OTP2_BUILD_GRAPH",
+            "chouetteJobId": "rb_rut_20221214010636743949",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "STARTED",
+            "date": 1670976475360,
+            "action": "EXPORT",
+            "chouetteJobId": "rb_rut_20221214010636743949",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "OK",
+            "date": 1670976782352,
+            "action": "EXPORT",
+            "chouetteJobId": "rb_rut_20221214010636743949",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "STARTED",
+            "date": 1670977208618,
+            "action": "BUILD_GRAPH",
+            "chouetteJobId": "rb_rut_20221214010636743949",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "OK",
+            "date": 1670977352658,
+            "action": "OTP2_BUILD_GRAPH",
+            "chouetteJobId": "rb_rut_20221214010636743949",
+            "referential": "rb_rut"
+        },
+        {
+            "state": "OK",
+            "date": 1670979133319,
+            "action": "BUILD_GRAPH",
+            "chouetteJobId": "rb_rut_20221214010636743949",
+            "referential": "rb_rut"
+        }
+    ],
+    "correlationId": "04711a66-6302-4ffd-90b1-ca248a8a771f",
+    "firstEvent": 1670972104337,
+    "lastEvent": 1670979133319,
+    "durationMillis": 7028982,
+    "endState": "OK",
+    "fileName": null,
+    "providerId": 2,
+    "username": "unknown",
+    "errorCode": null
+},
+  {
     events: [
       {
         state: 'PENDING',
